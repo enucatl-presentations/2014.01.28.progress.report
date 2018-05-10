@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>High-energy grating interferometry</title>
+
+        <meta name="description" content="Third progress report">
+        <meta name="author" content="Matteo Abis">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="css/reveal.min.css">
+        <link rel="stylesheet" href="css/theme/eth.css" id="theme">
+        <link rel="stylesheet" href="css/plots.css">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+            document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="reveal">
+            <img src="images/eth-logo.jpg" alt="ETH Logo" width="20%"
+            align="left">
+            <img src="images/psi-logo.jpg" alt="PSI Logo" width="20%"
+            align="right">
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+
+                <section data-background="images/ETHbackground.png"
+                data-background-size="100%" data-background-position="bottom">
+                <h2>Grating interferometry above 100 keV</h2>
+                </section>
+
+                <section>
+                <h2>Previous episodes</h2>
+                <ul>
+                    <li>Bringing grating interferometry to energies between
+                    60 and 160 keV</li>
+                    <li>First edge-on setup demonstrated at 100 keV</li>
+                    <li>Questions: dark field</li>
+                </ul>
+                </section>
+
+                <section>
+                <section>
+                <h2>Experimental updates</h2>
+                </section>
+                <section>
+                <h2>New setup at 120 keV</h2>
+                <ul>
+                    <li>1<sup>st</sup> Talbot distance</li>
+                    <li>Nickel phase grating</li>
+                    <li>60 cm total length</li>
+                    <li>foam dark field \(\rightarrow\)</li>
+                </ul>
+                <img src="images/profile_S00613.svg" width="50%"
+                style="vertical-align: middle">
+                </section>
+
+                <section>
+                <h2>Achieved reliable operation</h2>
+                <div id="vis"></div>
+                </section>
+
+                <section>
+                <h2>The gratings</h2>
+                <p> Electron microscope </p>
+                <ul>
+                    <li>Duty cycle off by 10%</li>
+                    <li>Deformed lamellas</li>
+                    <li>Irregular growth</li>
+                </ul>
+                <div id="grating-images">
+                    <img src="images/Au_Grating_003.png" width=40%>
+                    <img src="images/Au_Grating_010.png" width=40%>
+                </div>
+                </section>
+                </section>
+
+                <section>
+                <h2>Questions about grating interferometry at high energies</h2>
+                <p>
+                Most important: why do we always get a strong dark-field
+                signal?
+                </p>
+                <img src="images/profile_S00400.svg" width="50%">
+                <p>1 mm copper rods</p>
+                </section>
+
+                <section>
+                <h2>Hypotheses</h2>
+                <ul>
+                    <li>Sample inhomogeneities</li>
+                    <li>Artifact of the low visibility</li>
+                    <li>Compton scattering</li>
+                    <li>Polychromatic spectrum</li>
+                </ul>
+                </section>
+
+                <section>
+                <h2>Sample inhomogeneities</h2>
+                <p>Signal present also for parallel blocks of pure elements</p>
+                <p>On the other hand, it does not respond to strong
+                inhomogeneities, e.g. oriented fibers.</p>
+                <iframe src="http://pc9689:7000" width="100%"
+                    height=500></iframe>
+                </section>
+
+                <section>
+                <section>
+                <h2>Fourier analysis with low visibility</h2>
+                <p>
+                <i>Signal-to-noise ratio in x ray dark-field imaging using a
+                    grating interferometer</i><br>Chabior et al. 2011
+                </p>
+                <p>Claim: low SNR \(\rightarrow B \propto A\) </p>
+                </section>
+
+                <section>
+                <h2>Simulation of noisy<br>
+                    fourier component analysis</h2>
+                <ul>
+                    <li>\(a_0 + a_1 \cos(x + \phi)\)</li>
+                    <li>100 000 curves for each value of \(a_0\) and \(a_1\)</li>
+                    <li>9 phase steps</li>
+                    <li>Poisson noise</li>
+                    <li>Comparison of FFT and weighted fit</li>
+                </ul>
+                </section>
+
+                <section>
+                <h2>FFT vs weighted fit<br>
+                    Gauss-Markov theorem</h2>
+                <p>The weighted fit is the minimum variance estimator</p>
+                <div class="statistical">
+                    <img src="images/stats_visibility_visibility_sd.svg"
+                    width="47%">
+                    <img src="images/stats_phase_constant_sd.svg"
+                    width="47%">
+                </div>
+                <p>But the difference is very small for \(v < 50\%\)</p>
+                </section>
+
+                <section>
+                <h2>Dark field</h2>
+                <p>Biased estimator only for low exposure</p>
+                <p>\(\Rightarrow\) relevant for strongly absorbing samples</p>
+                <div class="statistical">
+                    <img src="images/stats_visibility_visibility_mean.svg"
+                    width="47%">
+                    <img src="images/stats_visibility_constant_mean.svg"
+                    width="47%">
+                </div>
+                <p></p>
+                </section>
+                </section>
+
+                <section>
+                <section>
+                <h2>Compton scattering</h2>
+                </section>
+                <section data-transition="fade">
+                <h2>Compton scattering</h2>
+                <p>\(\approx\) 100 times stronger than coherent scattering
+                @100 keV</p>
+                <img src="images/carbon.png" width="40%">
+                </section>
+
+                <section data-transition="fade">
+                <h2>Compton scattering</h2>
+                <div>
+                    <p>strongly suppressed by the thick absorption grating</p>
+                    <p>acceptance angle \(\alpha = 2p/d \approx 10^{-4}\)</p>
+                    \[
+                    \begin{align*}
+                    p &= \text{pitch}\\
+                    d &= \text{Talbot distance}
+                    \end{align*}
+                    \]
+                </div>
+                </section>
+                </section>
+
+                <section>
+                <section>
+                <h2>Spectral properties</h2>
+                </section>
+                <section>
+                <h2>Monochromatic carpet</h2>
+                <p>100 keV</p>
+                <img src="images/talbot_carpet_mono100.svg" width="70%">
+                </section>
+
+                <section>
+                <h2>Polychromatic visibility</h2>
+                <p>Theoretical calculation from Thüring and Stampanoni "Performance
+                and optimization of X-ray grating interferometry"</p>
+                <div id="theo"></div>
+                </section>
+
+                <section>
+                <h2>Polychromatic carpet</h2>
+                <p>extremely wide spectrum: 10-160 keV</p>
+                <img src="images/talbot_carpet_160kVp.svg" width="70%">
+                </section>
+
+                <section>
+                <h2>Thickness and material</h2>
+                <iframe src="http://pc9689:7011" width="100%"
+                    height=520></iframe>
+                </section>
+
+                <section>
+                <h2>Dispersion</h2>
+                <p>Iron wedge, angle \( = \pi / 6 \)</p>
+                <div id="disp"></div>
+                </section>
+                </section>
+
+
+                <section>
+                <h2 class="fragment">Questions?</h2>
+                </section>
+
+            </div>
+
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
+        <script src="lib/js/d3.v3.js"></script>
+
+            <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                width: '90%',
+                height: '65%',
+                margin: 0,
+                controls: true,
+                progress: true,
+                history: true,
+                center: false,
+                slideNumber: true,
+                transition: 'linear',
+
+                theme: 'eth', // available themes are in /css/theme
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                { src: 'plugin/notes/notes.js', async: true, condition:
+                    function() { return !!document.body.classList; } },
+                { src: 'plugin/math/math.js', async: true }
+                ]
+            });
+            </script>
+            <script src="js/visibility.js"></script>
+            <script type="text/javascript">
+                visibility_plot("#vis", "images/S00618_visibility.json", "120 keV");
+                visibility_plot("#vis", "images/visibility_100kev_visibility.json", "100 keV");
+            </script>
+            <script src="js/dispersion.js"></script>
+            <script type="text/javascript">
+                dispersion_plot("#disp", "images/dispersion_Fe.json", "");
+            </script>
+            <script src="js/theoretical_visibility.js"></script>
+            <script type="text/javascript">
+                theo_visibility_plot("#theo", "images/theoretical_visibility.json", "");
+            </script>
+            </body>
+        </html>

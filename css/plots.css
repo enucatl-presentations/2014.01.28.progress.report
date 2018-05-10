@@ -1,0 +1,42 @@
+.axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+.line {
+    fill: none;
+    stroke: black;
+    stroke-width: 2px;
+}
+
+#dispersion_plot,
+#visibility_plot {
+    stroke: darkblue;
+    stroke-width: 4px;
+}
+
+.line.average {
+    stroke: red;
+    stroke-dasharray: 10 10;
+}
+
+.focus circle {
+    stroke: black;
+    stroke-width: 2px;
+    fill: blue;
+    opacity: 0.7
+}
+
+.focus text {
+    font-family: sans-serif;
+    font-size: 75%;
+    color: blue;
+    background-color: white;
+}
